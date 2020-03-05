@@ -61,6 +61,24 @@ class App1Postalcode(models.Model):
 
 
 class ViewHospitalInfo(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    serial_id = models.CharField(max_length=5)
+    serial_id_last = models.CharField(max_length=5)
+    public_year = models.IntegerField()
+    city_id = models.CharField(max_length=5)
+    hospital_name = models.CharField(max_length=500)
+    hospital_type = models.CharField(max_length=50)
+    dpc_bed_calcu = models.IntegerField()
+    hospital_charge_type = models.CharField(max_length=50)
+    dpc_bed_rate = models.FloatField()
+    recovery_bed_num = models.IntegerField()
+    regional_care_bed_num = models.IntegerField()
+    mental_bed_num = models.IntegerField()
+    recuperation_bed_num = models.IntegerField()
+    tuberculosis_bed_num = models.IntegerField()
+    bed_number = models.IntegerField()
+    public_month = models.IntegerField()
+    prefecture_name = models.CharField(max_length=50)
 
     class Meta:
         managed = False
