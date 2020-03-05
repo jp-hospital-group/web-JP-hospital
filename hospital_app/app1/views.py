@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
-from app1.models import HospitalInfo
+from app1.models import App1Hospitalinfo
 
 
 # Create your views here.
@@ -14,7 +14,7 @@ class ShowAllHospitalInfo(generic.ListView):
     context_object_name = 'HospitalInfo'
 
     def get_queryset(self):
-        return HospitalInfo.objects.order_by('-bed_number')[0:100]
+        return App1Hospitalinfo.objects.order_by('-bed_number')[0:100]
 
 
 class ShowTokyoHospitalInfo(generic.ListView):
@@ -22,4 +22,4 @@ class ShowTokyoHospitalInfo(generic.ListView):
     context_object_name = 'HospitalInfo'
 
     def get_queryset(self):
-        return HospitalInfo.objects.order_by('-bed_number')[0:100]
+        return App1Hospitalinfo.objects.order_by('-bed_number')[0:100]
