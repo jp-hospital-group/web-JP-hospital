@@ -22,4 +22,4 @@ class ShowTokyoHospitalInfo(generic.ListView):
     context_object_name = 'HospitalInfo'
 
     def get_queryset(self):
-        return App1Hospitalinfo.objects.order_by('-bed_number')[0:100]
+        return App1Hospitalinfo.objects.filter()
